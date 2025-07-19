@@ -1566,9 +1566,35 @@ section {
   }
 }
 
-/*  Fix header padding to avoid overlap */
+/* Fix header padding to avoid overlap */
 body {
-  padding-top: 80px; /* adjust to match navbar height */
+  padding-top: 70px; /* Match the navbar's height */
+}
+
+@media (max-width: 990px) {
+  /* Fix for the "About Goa" section layout on mobile */
+  .containerx {
+    flex-direction: column; /* Stack image carousel and text vertically */
+    height: auto;           /* Allow the section to grow to fit its content */
+    gap: 2rem;              /* Add space between the carousel and the text */
+  }
+
+  /* Adjust the carousel container for mobile */
+  .cards {
+    width: 100%;            /* Make carousel container use the full width */
+    height: 45vh;           /* Give the carousel a good height on mobile */
+  }
+  
+  /* Adjust the text block below the carousel */
+  .about-info {
+    margin-left: 0;         /* Remove side margin */
+    text-align: center;     /* Center the heading */
+    padding: 0 1rem;        /* Add a little horizontal padding */
+  }
+
+  .about-info p {
+    text-align: justify;    /* Justify the paragraph for a cleaner look */
+  }
 }
 
 /* end */
